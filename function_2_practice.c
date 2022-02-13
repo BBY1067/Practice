@@ -92,35 +92,65 @@
 
 //写一个函数,实现整数有序序列二分查找
 
-int look(int arr[],int i,int sz)//arr实际上是个指针
-{
-	
-	/*int sz = sizeof(arr) / sizeof(arr[0]);*///不能求得数组大小
-	int left = 0;
-	int right = sz - 1;
-	int mid = (left + right) / 2;
-	while (left <= right)
-	{
-		if (i > arr[mid])
-			left = mid + 1;
-		else if (i < arr[mid])
-			right = mid - 1;
-		else
-			return mid;
-	}
-	if (left > right)
-		return -1;
-}
-int main()
-{
-	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
-	int sz = sizeof(arr) / sizeof(arr[0]);
-	int i = 0;
-	scanf("%d", &i);
-	int ret=look(arr,i,sz);//仅仅传的是数组第一个数的地址
-	if (ret == -1)
-		printf("not found");
-	else
-		printf("found, low mark is %d", ret);
-	return 0;
-}
+//int look(int arr[],int i,int sz)//arr实际上是个指针
+//{
+//	
+//	/*int sz = sizeof(arr) / sizeof(arr[0]);*///不能求得数组大小
+//	int left = 0;
+//	int right = sz - 1;
+//	while (left <= right)
+//	{
+//		int mid = (left + right) / 2;
+//		if (i > arr[mid])
+//			left = mid + 1;
+//		else if (i < arr[mid])
+//			right = mid - 1;
+//		else
+//			return mid;
+//	}
+//	if (left > right)
+//		return -1;
+//}
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5,6,7,8,9,10 }; 
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	int i = 0;
+//	scanf("%d", &i);
+//	int ret=look(arr,i,sz);//仅仅传的是数组第一个数的地址
+//	if (ret == -1)
+//		printf("not found");
+//	else
+//		printf("found, low mark is %d", ret);
+//	return 0;
+//}
+
+//写一个函数，每调用一次函数，就会将num的值增加1
+
+//void add(int* a)
+//{
+//	(*a)++;//++的计算优先级大于指针*（类似于先乘除后加减）
+//	return a;
+//}
+//int main()
+//{
+//	int num = 0;
+//	printf("do you wanna add 1 to num?(yes/no):");
+//	char choice[20] = { 0 };
+//	while (1) 
+//	{
+//		scanf("%s", choice);
+//		if (strcmp(choice, "yes") == 0)
+//		{
+//			add(&num);
+//		}
+//		else
+//			break;
+//	}
+//	printf("final value:%d", num);
+//	return 0;
+//}
+
+
+
+
